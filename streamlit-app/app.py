@@ -283,7 +283,7 @@ def main():
         connect_str = os.getenv('connect_str')
         container_name = "mathapp-container"
         # Usage example
-        img_url = 'https://mathappanalysis.blob.core.windows.net/mathapp-container/test_image.jpg?sp=r&st=2024-05-17T23:58:09Z&se=2024-05-27T07:58:09Z&spr=https&sv=2022-11-02&sr=b&sig=9Czs3Q%2FXKpU26UAhPEspk%2BCpBx9tu5TV0rWnaRPxwhU%3D'
+        img_url = os.getenv('img_url')
         # image_url = upload_image_to_blob(image_url_stream, 'mathapp-container', 'test_image.jpg')
         # print("Image URL:", image_url)
         
@@ -300,8 +300,6 @@ def main():
         #         permission=BlobSasPermissions(read=True),
         #         expiry=datetime.utcnow() + timedelta(hours=1)  # Link is valid for 1 hour
         #     )
-        #     # img_url = 'https://mathappanalysis.blob.core.windows.net/mathapp-container/test_image.jpg?sp=r&st=2024-05-12T14:38:57Z&se=2024-05-16T22:38:57Z&spr=https&sv=2022-11-02&sr=b&sig=r%2Fcv0KG291rk6b2tml5kUB1PhG9jvRa1JNi%2Brn7IrXY%3D'
-        #     url = f"https://{account_name}.blob.core.windows.net/{container_name}/{blob_name}?{sas_blob}"
         #     return url
 
         # blob_rul = generate_blob_sas_url('test_image.jpg')
