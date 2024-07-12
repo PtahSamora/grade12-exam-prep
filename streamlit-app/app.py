@@ -280,7 +280,7 @@ def main():
         image = Image.open(solution_from_user)
         st.image(image, caption='Uploaded Image', use_column_width=True)
         # st.write("")
-        connect_str = "5o/saoXoLgQZkR8uJh+Wy/XsWtwvom/G17bJ7i+9rtuxX4MTDGii2SszLZ0EHLpRU1O3a8zk5RvL+AStvIBBBA=="
+        connect_str = os.getenv('connect_str')
         container_name = "mathapp-container"
         # Usage example
         img_url = 'https://mathappanalysis.blob.core.windows.net/mathapp-container/test_image.jpg?sp=r&st=2024-05-17T23:58:09Z&se=2024-05-27T07:58:09Z&spr=https&sv=2022-11-02&sr=b&sig=9Czs3Q%2FXKpU26UAhPEspk%2BCpBx9tu5TV0rWnaRPxwhU%3D'
